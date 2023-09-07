@@ -1,0 +1,52 @@
+# Test findAll endpoint
+###
+GET http://localhost:8080/api/posts
+Accept: application/json
+
+###
+
+# Test findById endpoint
+###
+GET http://localhost:8080/api/posts/bba41253beec8401d09e9cd31c0c619
+Accept: application/json
+
+###
+
+# Test create endpoint
+###
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "id": "12345678987654321",
+  "title": "This is a test blog post",
+  "slug": "this-is-a-test-blog-post",
+  "date": "2023-08-30",
+  "timeToRead": 1,
+  "tags": "Test"
+}
+
+###
+
+# Test update endpoint
+###
+PUT http://localhost:8080/api/posts/12345678987654321
+Content-Type: application/json
+
+{
+  "id": "12345678987654321",
+  "title": "This is a TEST blog post",
+  "slug": "this-is-a-test-blog-post",
+  "date": "2023-08-30",
+  "timeToRead": 1,
+  "tags": "Test"
+}
+
+###
+
+# Test delete endpoint
+###
+DELETE http://localhost:8080/api/posts/bba41253beec8401d09e9cd31c0c619
+Accept: application/json
+
+###
